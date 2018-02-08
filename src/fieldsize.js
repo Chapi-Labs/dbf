@@ -13,4 +13,6 @@ module.exports = {
     F: 18,
     // number
     B: 8,
+    // integer
+    I: 4,
 };
