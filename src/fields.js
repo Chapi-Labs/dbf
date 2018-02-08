@@ -4,6 +4,7 @@ var types = {
     string: 'C',
     number: 'N',
     boolean: 'L',
+    integer: 'I',
     // type to use if all values of a field are null
     null: 'C'
 };
