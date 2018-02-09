@@ -37,7 +37,14 @@ function inherit(a, b) {
 
 function obj(_) {
     var fields = {}, o = [];
-    for (var p in _) fields[p] = _[p] === null ? 'null' : typeof _[p];
+    for (var p in _) {
+      fields[p] = _[p] === null ? 'null' : typeof _[p];
+      if (typeof _[p] === 'number') {
+        if (Number.isInteger(_[p]) === true){
+          fields[p] = 'integer';
+        }
+      }
+    }
     for (var n in fields) {
         var t = types[fields[n]];
         if(t){
